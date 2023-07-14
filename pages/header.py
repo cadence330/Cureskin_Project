@@ -1,15 +1,16 @@
-from selenium.webdriver.common.by import By
 from pages.base_page import Page
+from selenium.webdriver.common.by import By
+from time import sleep
 
 
 class Header(Page):
-    ORDERS_BTN = (By.ID, 'nav-orders')
-    SEARCH_FILED = (By.ID, 'twotabsearchtextbox')
-    SEARCH_BTN = (By.ID, 'nav-search-submit-button')
+    SHOP_BY_CONCERN_BTN = (By.XPATH, "//summary/span[@class='label']")
+    ACNE_BTN = (By.CSS_SELECTOR, "a[href*='acne'] span.label")
 
-    def search_amazon(self, search_query):
-        self.input_text(search_query, *self.SEARCH_FILED)
-        self.click(*self.SEARCH_BTN)
+    def go_to_acne_products(self):
+        self.click(*self.SHOP_BY_CONCERN_BTN)
+        sleep(2)
+        # self.wait_for_element_appear(*self.ACNE_BTN)
+        self.click(*self.ACNE_BTN)
 
-    def click_orders(self):
-        self.click(*self.ORDERS_BTN)
+

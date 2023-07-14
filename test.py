@@ -29,8 +29,4 @@
 # print(text)
 
 def unique_char(word):
-
-
-
-
-
+    pass
