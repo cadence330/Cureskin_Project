@@ -8,7 +8,3 @@ from selenium.webdriver.support import expected_conditions as EC
 def open_main_page(context):
     context.app.main_page.open_main_page()
 
-
-@when('Go to acne products page')
-def go_to_acne_products(context):
-    context.app.header.go_to_acne_products()
