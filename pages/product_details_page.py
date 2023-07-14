@@ -18,6 +18,3 @@ class ProductDetailsPage(Page):
 
     def go_to_cart_page(self):
         self.click(*self.VIEW_CART_BUTTON)
-
-
-
