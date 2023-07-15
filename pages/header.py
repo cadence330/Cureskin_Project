@@ -10,7 +10,6 @@ class Header(Page):
     def go_to_acne_products(self):
         self.click(*self.SHOP_BY_CONCERN_BTN)
         sleep(2)
-        # self.wait_for_element_appear(*self.ACNE_BTN)
         self.click(*self.ACNE_BTN)
 
 

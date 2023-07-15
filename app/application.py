@@ -13,6 +13,6 @@ class Application:
         self.main_page = MainPage(self.driver)
         self.acne_products_page = AcneProductsPage(self.driver)
         self.product_details_page = ProductDetailsPage(self.driver)
-        self.cart_page = CartPage
+        self.cart_page = CartPage(self.driver)
 
 
