@@ -13,9 +13,7 @@ class AcneProductsPage(Page):
                 product.click()
             sleep(0.7)
 
-        # acne_products[2].click()
-        # or
-        # self.find_element(By.LINK_TEXT, product_name).click()
+
 
 
 
