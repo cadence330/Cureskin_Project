@@ -8,6 +8,7 @@ class Header(Page):
     ACNE_BTN = (By.CSS_SELECTOR, "a[href*='acne'] span.label")
 
     def go_to_acne_products(self):
+        # self.wait_for_element_click(*self.SHOP_BY_CONCERN_BTN)
         self.click(*self.SHOP_BY_CONCERN_BTN)
         sleep(2)
         self.click(*self.ACNE_BTN)

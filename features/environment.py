@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from app.application import Application
+from selenium.webdriver.chrome.options import Options
 
 
 def browser_init(context):
@@ -10,7 +11,16 @@ def browser_init(context):
     :param context: Behave context
     """
     service = Service(executable_path=r'C:\Users\domon\OneDrive\Desktop\Cureskin Project\chromedriver.exe')
-    context.driver = webdriver.Chrome(service=service)
+
+    # Headless Mode
+    # chrome_options = Options()
+    # chrome_options.add_argument("--headless")  # Run in headless mode without a GUI
+    # chrome_options.add_argument("--disable-gpu")  # Disable GPU acceleration (optional)
+
+    # Drivers
+    context.driver = webdriver.Chrome(service=service, options=None)
+    # context.driver = webdriver.Firefox(executable_path=r'C:\Users\domon\OneDrive\Desktop\Cureskin Project\
+    # geckodriver.exe')
 
     context.driver.maximize_window()
 
