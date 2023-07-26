@@ -9,7 +9,7 @@ from time import sleep
 # get the path to the ChromeDriver executable
 driver_path = ChromeDriverManager().install()
 # create a new Chrome browser instance
-service = Service(driver_path)
+service = Service(executable_path=r'C:\Users\domon\OneDrive\Desktop\Cureskin Project\chromedriver.exe')
 driver = webdriver.Chrome(service=service)
 driver.maximize_window()
 
