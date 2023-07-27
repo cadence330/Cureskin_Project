@@ -7,5 +7,5 @@ def add_to_cart_and_verify(context, product_name):
 
 
 @when("Go to cart page")
-def go_to_cart_page(context):
-    context.app.product_details_page.go_to_cart_page()
+def go_to_cart(context):
+    context.app.product_details_page.go_to_cart()

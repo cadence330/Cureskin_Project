@@ -7,4 +7,4 @@ class CartPage(Page):
     CART_PAGE_TITLE = "Your cart"
 
     def verify_user_on_cart_page(self):
-        self.verify_element_text(self.CART_PAGE_TITLE, *self.CART_PAGE_TITLE_LOCATOR)
+        self.verify_url_contains_query("checkouts")
