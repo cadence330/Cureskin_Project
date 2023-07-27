@@ -37,7 +37,7 @@ def browser_init(context, test_name):
         'browser': 'Chrome',
         'os_version': '11',
         'os': 'Windows',
-        'name': test_name
+        'name': 'main_page_test'
     }
     bs_user = 'domonicdavis_fPl95A'
     bs_key = 'yBJZyz2qsiTg7xotNiuh'
